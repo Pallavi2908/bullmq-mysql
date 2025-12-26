@@ -3,6 +3,7 @@
 This is a mini image compression service built using Express, BullMQ and Sharp (Node.js library for image compression).
 This is the very heart of Nexus, which is built on this core structure.
 BullMQ is used to set up a Queue which queues incoming Jobs (requests sent from Client side) and is off loaded by workers (which perform the compression task).
+Update: SSE has been added for demonstration purposes: updates of jobs' progresses would be visible to user.
 
 # Features
 
@@ -11,6 +12,7 @@ BullMQ is used to set up a Queue which queues incoming Jobs (requests sent from 
 - Dynamic image resizing (no fixed width for all images)
 - High-quality downscaling using mks2021 kernel
 - Safe handling of network failures and retries
+- Server-Sent Events for updates on job's current status
 
 # Installation
 
